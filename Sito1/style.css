@@ -1,0 +1,126 @@
+/* Reset base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo e struttura base */
+html, body {
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, #1d3557, #457b9d);
+  padding: 10px 30px;
+  margin-bottom: 0; 
+}
+
+.navbar .logo img {
+  height: 80px;
+}
+
+.navbar .nav-links {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-around;
+  margin-left: 30px;
+}
+
+.navbar .nav-links a {
+  flex: 1;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1rem;
+  padding: 15px 0;
+  transition: 0.3s;
+}
+
+.navbar .nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Contenuto principale */
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;     /* CENTRA VERTICALMENTE */
+  align-items: center;         /* CENTRA ORIZZONTALMENTE */
+  padding: 20px;
+  background-color: #f0f0f0;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #1a73e8; /* Blu */
+  margin-top: 20px;
+  text-align: center;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: bold; /* Grassetto */
+  margin: 10px 0;
+  max-width: 800px;
+  text-align: center;
+}
+
+/* Locandina */
+.locandina {
+  width: 80%;
+  max-width: 700px;
+  border: 5px solid #0077b6;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  object-fit: contain;
+  margin-top: 20px; /* 🔽 Distanza dal testo sopra */
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(to right, #1d3557, #457b9d);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .navbar .logo img {
+    height: 60px;
+  }
+
+  .nav-links a {
+    width: 100%;
+  }
+
+  .locandina {
+    width: 95%;
+  }
+}
